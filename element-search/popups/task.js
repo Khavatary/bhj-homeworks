@@ -7,7 +7,7 @@ modalMain.classList.add(`modal_active`);
 
 for (let i = 0; i < modalClose.length; i++) {
   modalClose[i].onclick = function () {
-    this.closest('.modal_active').classList.remove('modal_active');
+    this.closest('div.modal').classList.remove('modal_active');
   }
 }
 
