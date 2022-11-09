@@ -17,8 +17,8 @@ class Game {
   }
 
   registerEvents() {
-
     document.addEventListener(`keydown`, (e) => {
+      console.log(this);
       let input = e.key.toLocaleLowerCase();
       let check = this.currentSymbol.textContent.toLocaleLowerCase();
       (check === input) ? this.success(): this.fail();
