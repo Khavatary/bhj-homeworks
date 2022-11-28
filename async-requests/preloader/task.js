@@ -4,7 +4,7 @@ const loader = document.getElementById(`loader`);
 let xhr = new XMLHttpRequest();
 xhr.open(`GET`, `https://netology-slow-rest.herokuapp.com`);
 xhr.send();
-xhr.onreadystatechange = () => {
+xhr.addEventListener(`readystatechange`, () => {
   if (xhr.readyState === xhr.DONE) {
     loader.classList.remove(`loader_active`);
     let valute = JSON.parse(xhr.response).response.Valute;
@@ -23,4 +23,4 @@ xhr.onreadystatechange = () => {
       </div>`);
     }
   };
-};
+});
